@@ -1,0 +1,68 @@
+Program 1:
+import java.util.Scanner;
+class Divisibility
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter the number");
+		int num=sc.nextInt();
+		if(num%11==0 && num%17==0)
+		{
+			System.out.println("Foo Bar");
+		}
+		else if(num%17==0)
+		{
+			System.out.println("Bar");
+		}
+		else if(num%11==0)
+		{
+			System.out.println("Foo");
+		}
+		else
+		{
+			System.out.println("number is neither divisible by 11 nor 17");
+		}
+	}
+}
+
+Program 2:
+import java.util.Scanner;
+class Swap2
+
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the values to swap");
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		System.out.println("values before swapping for X: "+ x + " for Y: "+y);
+		x=x+y;
+		y=x-y;
+		x=x-y;
+		System.out.println("values after swapping for X: " +x + " for Y: "+y);
+	}
+}
+
+
+Program 3:
+import java.util.Scanner;
+class Sum
+{
+	public static void main(String [] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num=sc.nextInt();
+		int sum=0;
+		while(num>0)
+		{
+			 int temp=num%10;
+			 sum=sum+temp;
+			 num=num/10;
+		}
+		System.out.println("Sum of the digits from the number is : "+sum);
+	}
+}

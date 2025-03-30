@@ -1,0 +1,135 @@
+30-11-2022   7:42pm
+Entering element in the array.
+class Akshay {
+    public static void main(String[] args) {
+        int a[] =new int[5];
+         a[0] = 10;
+         a[1]= 20;
+         a[2] =30;
+         a[3] = 40;
+         a[4] = 50;
+    System.out.println(a[0]);
+     System.out.println(a[1]);
+      System.out.println(a[2]);
+       System.out.println(a[3]);
+        System.out.println(a[4]);
+    }
+}
+
+
+30-11-2022   7:42pm
+Print the array elemet using for and for each loop.
+
+class Akshay {
+    public static void main(String[] args) {
+        int a[] =new int[5];
+         a[0] = 10;
+         a[1]= 20;
+         a[2] =30;
+         a[3] = 40;
+         a[4] = 50;
+    System.out.println(a[0]);
+     System.out.println(a[1]);
+      System.out.println(a[2]);
+       System.out.println(a[3]);
+        System.out.println(a[4]);
+        
+   //     for(int i=0;i<=a.length;i++) {
+   //         System.out.println(a[i]);
+    //    }
+        
+        for(int name : a ) {
+            System.out.println(name);
+        }
+    }
+}
+
+another types of array decleartion in java.
+
+int arr[] = {15,73,484,494}
+
+when ever we want to access the array which is not in the given range then we get array out of box exception/.
+
+
+Sum of all elements in an Array
+import java.util.*;
+class Akshay {
+    public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter the size of Array");
+    int size = s.nextInt();
+    int a[] = new int[size];
+    System.out.println("ENter"+size+"Size of Array");
+    for(int i = 0; i<a.length;i++) {
+            a[i]=s.nextInt();
+    }
+    System.out.println("Enter data are Arrays");
+    int sum = 0;
+    for(int i =0;i<a.length;i++) 
+    {
+        sum += a[i];
+    }
+    System.out.println(sum);
+    }
+}
+
+Average of Number Using Arrays
+import java.util.*;
+class Akshay {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter The Size Of Array");
+    int size = sc.nextInt();
+    double d[] = new double[size];
+    for(int i =0;i<d.length;i++)
+    {
+        d[i] =sc.nextDouble();
+    }
+    double sum = 0.0;
+    for(int i  = 0;i<d.length;i++)
+    {
+        sum+=i;
+    }
+    double avg=sum/d.length;
+    System.out.println(avg);
+    }
+}
+
+Print Dublicate Array of Same Type
+import java.util.*;
+class Akshay {
+    public static void main(String[] args) {
+    int []a = {10,20,30,40};
+    for(int i:a)
+    {
+        System.out.println(i);
+    }
+    int []b = a;
+    for(int j:b)
+    {
+        System.out.println(j);
+    }
+    }
+}
+
+names in reverse order using String
+import java.util.*;
+class Akshay {
+    public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter The Size Of Array");
+    int size = s.nextInt();
+    String name [] = new String[size];
+    for(int i =0;i<name.length;i++)
+    {
+        name[i]=s.next();
+
+    }
+    System.out.println("names in revese order");
+    for(int i=name.length-1;i>=0;i--)
+    {
+        System.out.println(name[i]);
+    }
+    }
+
+}

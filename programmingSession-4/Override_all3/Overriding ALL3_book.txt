@@ -1,0 +1,28 @@
+public class book {
+	String name;
+	int id;
+	book(String name,int id)
+	{
+		this.name=name;
+		this.id=id;
+	}
+	public String toString(){
+		return "Name="+name+"Id="+id;
+	}
+	public boolean equals (Object o){
+		book b1=(book)o;
+		return name.equals(b1.name);
+	}
+	public int hashCode(){
+		int a = name.hashCode();
+		int b= id;
+		return a+b;
+	}
+	public static void main(String[] args) {
+		book b1=new book("math", 03);
+		book b2=new book("math",03);
+		System.out.println(b1.toString()); //toSting Output
+		System.out.println(b1.equals(b2)); // equals
+		System.out.println(b1.hashCode());	// hashCode 	
+	}
+}

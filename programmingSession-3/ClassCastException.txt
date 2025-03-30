@@ -1,0 +1,29 @@
+// CLASS CAST EXCEPTION ------
+class parent
+{
+    public void m1()
+    {
+        System.out.println(" From parent");
+    }
+}
+class child extends parent
+{
+    public void m1()
+    {
+        System.out.println("From Child");
+    }
+}
+class Driver {
+    public static void main(String[] args) {
+        parent p1 =new parent();
+        p1.m1();
+        try
+        {
+            child ch1 = (child) p1;
+            ch1.m1();
+        }catch(ClassCastException cs)
+        {
+            System.out.println(" Exception Handled");
+        }
+    }
+}

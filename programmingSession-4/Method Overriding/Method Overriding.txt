@@ -1,0 +1,22 @@
+// METHOD OVERRIDING -------------------------------------
+	class A{
+		public void m1() {
+			System.out.println("this is Parent class");
+		}
+	}
+
+public class B extends A{
+		public void m1() {
+			System.out.println("This is child class");
+		}
+		public static void main(String args[]) {
+			B b =new B();
+			b.m1();
+			A a2=new A();	
+			a2.m1();
+			System.out.println("after upcasting");
+			A a1= b;
+			a1.m1();
+			
+		}
+}

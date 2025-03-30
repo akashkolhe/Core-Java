@@ -1,0 +1,25 @@
+// Method Shadowing -------------------
+class parent
+{
+    public static void m1()
+    {
+        System.out.println("parent");
+    }
+}
+class child extends parent
+{
+    public static void m1()
+    {
+        System.out.println("Child");
+    }
+}
+class Driver {
+    public static void main(String[] args) {
+        parent p1 =new parent();
+        p1.m1();
+        child ch=new child();
+        ch.m1();
+        parent p2=ch;
+        p2.m1();
+    }
+}

@@ -1,0 +1,12 @@
+// String to Primitive Data Conversion -----------
+
+public class program1 {
+	public static void main(String[] args)
+	{
+		String a="10";
+		int b=Integer.parseInt(a);	
+		System.out.println(10+b);
+//		System.out.println(s+"10");
+//		System.out.println("-------------");
+		}
+	}

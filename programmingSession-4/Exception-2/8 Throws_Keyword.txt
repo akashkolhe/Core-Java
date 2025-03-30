@@ -1,0 +1,22 @@
+public class Abc {
+
+	//throws keyword -------
+		public static void main(String[] args) throws InterruptedException,ArithmeticException
+		{
+				for(int i=1;i<=5;i++)
+				{
+				System.out.println(i);
+				Thread.sleep(500);
+				}
+				try 
+				{
+				int a=10/0;
+				}
+				catch(ArithmeticException e)
+				{
+				System.out.println("Exception Handled");
+				}
+			}
+
+		}
+

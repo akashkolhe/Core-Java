@@ -1,0 +1,15 @@
+//ARITHMETIC EXCEPTION ----------
+public class Arithmetic {
+	public static void main(String[] args) {
+	
+		try {
+			int c=10/0;
+			System.out.println(c);
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println(e);
+			System.out.println("exception handled");
+		}
+	}
+}

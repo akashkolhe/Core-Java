@@ -1,0 +1,69 @@
+Number is Even Or Odd Using Array
+import java.util.*;
+class Akshay {
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        switch(n%2)
+        {
+            case 0:
+            System.out.println("Even");
+            break;
+        
+        case 1:
+            System.out.println("Odd");
+            break;
+    }
+}
+}
+
+Using Array Even Odd
+import java.util.*;
+class Akshay {
+    public static void main(String[] args) {
+        //Scanner sc = new Scanner(System.in);
+       int a[] = {1,2,9,4,5,6};
+       for(int i=0; i<a.length;i++) 
+       {
+           if(a[i]%2 == 0)
+           {
+               System.out.println(a[i]+" "+"Even");
+           }
+           else
+           {
+               System.out.println(a[i]+" "+"Odd");
+           }
+       }
+
+        
+    }
+}
+3) 
+import java.util.*;
+class Akshay {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+    int size = sc.nextInt();
+    int [] a = new int[size];
+     System.out.println("Enter the Array");
+    for(int i=0;i<size;i++) {
+       
+        a[i] = sc.nextInt();
+    }
+   
+    for(int i=0;i<a.length;i++) {
+      //  System.out.println(a[i]);
+        if(a[i]%2==0) {
+            System.out.println("Even"+" "+a[i]);
+        }
+        else
+        {
+            System.out.println("Odd"+" "+a[i]);
+        }
+    }
+    
+
+        
+    }
+}

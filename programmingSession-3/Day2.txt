@@ -1,0 +1,677 @@
+Decision making statements:
+Helps the programmer to skip block of instruction.
+
+4 types:
+i)if
+ii)if-else
+iii)if-else if ladder
+iv)switch
+
+i)if 
+
+syntax:       if(condtion)
+               {
+                 //statments;
+               }
+
+-When the condition written inside if gets true then the statments 
+  written inside if-block gets executed or else it will not get executed
+   if the condition is false.
+
+case 1: if the condition is true
+
+class IfBlock 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("From main()");
+		if(true)
+		{
+			System.out.println("If block gets executed");		
+		}
+		System.out.println("End of main()");
+	}
+}
+output:
+From main()
+If block gets executed
+End of main()
+
+ 
+case 2:If the contion is false
+
+class IfBlock 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("From main()");
+		if(false)
+		{
+			System.out.println("If block gets executed");		
+		}
+		System.out.println("End of main()");
+	}
+}
+output:
+From main()
+End of main()  
+
+
+ii)If-else:
+
+syntax:
+   if(condition)
+   {
+    //stat 1;
+   }
+   else
+    {
+     //stat 2;
+    }
+
+workflow:If the if block condition is true then stat1 written inside if
+          block gets execure or-else the stat2 written in else block
+          will get executed.
+
+Ex:
+class IfBlock 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("From main()");
+		if(true)
+		{
+			System.out.println("If block gets executed");		
+		}
+		else
+		{
+			System.out.println("Else block gets executed");
+		}
+		System.out.println("End of main()");
+	}
+}
+output:
+From main()
+If block gets executed
+End of main()
+
+EX2:
+
+class IfBlock 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("From main()");
+		if(false)
+		{
+			System.out.println("If block gets executed");		
+		}
+		else
+		{
+			System.out.println("Else block gets executed");
+		}
+		System.out.println("End of main()");
+	}
+}
+output:
+From main()
+Else block gets executed
+End of main()
+
+EX:3
+class IfBlock 
+{
+	public static void main(String[] args) 
+	{
+		int a=10;
+		int b=20;
+		if(a>b)
+		{
+			System.out.println("a is greatest");
+		}
+		else
+		{
+			System.out.println("b is greatest");
+		}
+	}
+}
+output:
+b is greatest
+
+iii)if-else-if ladder
+
+syntax:
+   if(condition 1)
+    {
+      //stat 1;
+    }
+   else if(condition 2)
+   {
+    //stat 2;
+   }
+   else if(condition 3)
+   {
+    //stat 3;
+   }
+    .
+    .
+    .
+    .
+   else
+    {
+     //stat n;
+    }
+
+work flow:When contro reaches if-block it checks for the condition
+           if condition is true execute it or else control goes to the
+            next else-if block.....In case none of the if-block and else-if
+             blockes are satisfied then finally else-block gets executed.
+
+EX:
+class IfBlock 
+{
+	public static void main(String[] args) 
+	{
+		int a=20;
+		int b=20;
+		if(a>b)
+		{
+			System.out.println("a is greatest");
+		}
+		else if(a<b)
+		{
+			System.out.println("b is greatest");
+		}
+		else
+		{
+			System.out.println("Both are equal");
+		}
+	}
+}
+output:
+Both are equal
+
+
+iv)switch:
+
+syntax:
+  switch(value/exp/variable)
+  {
+     case value/exp:
+      {
+        //stat 1;
+      }
+     [break;]
+     case value/exp:
+      {
+        //stat 1;
+      }
+     [break;]
+     case value/exp:
+      {
+        //stat 1;
+      }
+     [break;]
+       :
+       :
+     default:
+          {
+            //stat n;
+          }
+  }
+
+note: in switch default block and break statement is also optional.
+
+
+Advantage of switch is grouping.we can achieve grouping by removing break statement.
+
+class SwitchEx 
+{
+	public static void main(String[] args) 
+	{
+		int a=2;
+		switch(a)
+		{
+			case 1:
+			{
+				System.out.println("from case 1");
+			}
+			case 2:
+			{
+				System.out.println("from case 2");
+			}
+			case 3:
+			{
+				System.out.println("from case 3");
+			}
+			default:
+			{
+				System.out.println("From default");
+			}
+		}
+	}
+}
+
+output:
+from case 2
+from case 3
+From default
+
+ 
+        Looping statements:Helps the programmer to execute the instructions repeatedly.
+
+4 types:
+
+i)while 
+ii)do-while
+iii)for
+iv)for-each
+
+
+i)While:
+
+syntax:   while(condition)
+           {
+            //instructions;
+           }
+while loop gets executed untill and unless the condition is true.once the condtion is false control comes
+       out of the while loop.
+
+For a while loop initialization, condition and updation is must.
+
+EX:
+class Looping1 
+{
+	public static void main(String[] args) 
+	{
+		int a=1;
+		int b=10;//initializtion 
+		while(a<=b)//condition
+		{
+			System.out.println(a);
+			a++;//updation 
+		}
+
+	}
+}
+output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+ii)do-while:
+
+syntax:
+
+do
+{
+ //instructions;
+}
+while(condition);
+
+note:For a do-while loop initialization, condition and updation is must.
+
+
+        while loop                                            do-while
+                                            
+i)First it checks for the condition,and if                  i)First execute the statement written in do
+ the condition is true then the statements                     do block and checks the condition.
+  written inside while gets executes or else not get
+   executed. 
+ii)the minimum iteration of while is 0.                     ii)the minimum iteration is 1.
+   EX:          int a=1;                                         Ex: int a=1;
+		int b=10;                                            int b=10;
+ 		int count=0;                                         int count=0;
+		while(a>=b)//false                                   do
+		{                                                   {
+			count++;                                      count++;
+		}                                                   }
+                                                                   while(a>=b);false
+       System.out.println(count);                                System.out.println(count);
+ 
+  output: 0                                                   output:1
+
+
+
+iii)for-loop:
+
+ syntax:
+  
+for(initialization;condition;updation)
+{
+//instructions;
+}
+
+note:initialization,condition and updation all the 3 statements are optional.
+
+Ex:
+
+class Looping1 
+{
+	public static void main(String[] args) 
+	{
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(i);
+		}
+	}
+}
+output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+          Constructor:Is a special type of method whose name is similar to class name.
+                       But it doesnt have the return type.
+           Constructors will be called at the time of object creation.
+          
+   purpose of the constructor is to load all the non static members of a class into object.
+
+Ex:
+
+class Student 
+{
+	int id;
+	String name;//non static variables
+	Student(int stdid,String sname)//constructor
+	{
+		this.id=stdid;
+		this.name=sname;
+	}
+	public static void main(String[] args) 
+	{
+		Student s=new Student(420,"sheela");//Object creation statement
+		System.out.println(s.id);//420
+		System.out.println(s.name);//sheela
+	}
+}
+output:
+420
+sheela
+
+           OOp's
+     Object oriented programming language.
+ 4 pillars of oop's:
+
+i)Encapsulation:It is the process of binding or wrapping up the states(attributes) and behaviour(properties) of an object.
+
+      states refers to non-static variables 
+      behaviour refers to non-static methods.
+    We can achieve encapsulation with the help of class.
+
+The advantage of encapsulation is data hiding.
+
+DataHiding:Restricting the direct access by providing the indirect secured access via methods.
+
+Without datahiding
+(we can access out data members directly and indirectly also.)
+
+Ex
+class Student 
+{
+	int id;
+	String name;
+	Student(int stdid,String sname)
+	{
+		this.id=stdid;
+		this.name=sname;
+	}
+	public String getName()
+	{
+		return name;
+	}
+}
+class StudentDriver 
+{
+	public static void main(String[] args) 
+	{
+		Student s1=new Student(420,"kamala");
+		System.out.println(s1.name);//kamala(Direct access)
+		System.out.println(s1.getName());//kamala(Indirect access)
+	}
+}
+output:
+kamala
+kamala
+
+
+In case of DataHiding(Direct access is restricted)
+We can achieve data hiding with help of private keyword.
+
+private:keyword and its is access modifier.
+        If any data member is prefixed with private keyword then within the class directly we can access
+          but outside of a class we cannot access directly.
+ Note: if we want to access the data members we need to access indirectly using methods.
+        Those methods are getter and setter.
+                          (get)      (modify)
+Ex:
+
+cclass Student 
+{
+	private int id;
+	private String name;
+	Student(int stdid,String sname)
+	{
+		this.id=stdid;
+		this.name=sname;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String newname)
+	{
+		this.name=newname;
+	}
+}
+class StudentDriver 
+{
+	public static void main(String[] args) 
+	{
+		Student s1=new Student(420,"kamala");
+		//System.out.println(s1.name);//CTE(Direct access is resticted)
+		System.out.println(s1.getName());//kamala(Indirect access)
+		s1.setName("vimala");
+		System.out.println("After modifying");
+        System.out.println(s1.getName());//Vimala
+	}
+}
+
+output:
+kamala
+After modifying
+Vimala
+
+
+ii)Inheritance:The process of acquiring properties from parent to child class.
+  Except constructor,private members and multi-line initializers all the members will get inherited
+   from parent to child.
+we can achieve inheritance in java using extends and implements keyword.                   
+
+5 types:
+i)Single level:if the inheritance os for one level
+
+   class A
+   {
+   }
+  class B extends A
+   {
+   }
+
+ii)multi level:if the inheritance is for more than one level.
+ 
+
+   class A
+   {
+   }
+  class B extends A
+   {
+   }
+   class C extends B
+   {
+   }
+  class D extends C
+   {
+   }
+
+iii)hierarchichal:if the parent have more than one child at the same level.
+
+ class A                 
+   {
+   }
+  class B extends A           class C extends A
+   {                           {
+   }                            }
+
+iv)multiple:if the child have more than one parent at the same level.
+
+class A          class C       
+   {              {
+   int a=10;        int a=20;
+   }               }
+
+  class B extends A,C
+  {
+   B()
+    {
+       super();//call the constructor of parent class
+    }
+   B b1=new B();
+    Sopl(b1.a)//Ambiguity error(Diamond problem)
+  }
+Note: hence,due to diamond problem this multiple inheritance will not support for classes in java.
+
+To over come this they have implemented interface.
+
+ v)Hybrid:combination of multiple and hierarchichal inheritance.
+
+Note: hence,due to diamond problem this Hybrid inheritance will not support for classes in java.
+
+
+   Non-primitive typecasting:(converting one type of Non-primitive data to another type of Non-primitive data)
+ 2 types:
+
+i)upcasting and
+ii)downcasting
+
+
+i)upcasting:The process of converting child class reference variable to parent class reference variable.
+                                  (or)
+             Creating object for child and storing in parent class reference varaible.
+
+Why do we need upcasting:(to achieve generalization)
+generalization:if we create reference variable of parent type we can store any kind of child object into that.
+
+Ex:
+
+class Parent 
+{
+	int a=10;
+}
+class Child extends Parent
+{
+	int b=20;
+}
+class Driver2 
+{
+	public static void main(String[] args) 
+	{
+		Parent p=new Child();//upcasting
+		System.out.println(p.a);//10
+		System.out.println(p.b);//CTE
+	}
+}
+Disadvantage of upcasting:
+           once the reference varibale got upcasted then by using that variable we can access only parent class members
+       but not child class members.
+
+To overcome this disadvantage we have to make use of Downcasting.
+
+ii)downcasting:Converting parent class reference to child class reference.
+
+EX
+class Parent 
+{
+	int a=10;
+}
+class Child extends Parent
+{
+	int b=20;
+}
+class Driver2 
+{
+	public static void main(String[] args) 
+	{
+		Parent p=new Child();//upcasting
+		System.out.println(p.a);//10
+		//System.out.println(p.b);//CTE
+		System.out.println("After performing downcasting ");
+         Child ch=(Child)p;//Downcasting
+        System.out.println(ch.a);//10
+		System.out.println(ch.b);//20
+	}
+}
+
+
+iii)Polymorphism:The object has the ability to change many forms.(Objects changing its behaviour)
+2 types
+Binding:(The association between method call statement and method declaration statement)
+
+i)Compile Time Polymorphism:
+ If the binding happend at compile time and same behaviour is executed.
+  we can achieve this with the help of:
+   a)method overloading:(A class have more than one methods with same name but different formal arguments)
+   b)constructor overloading:(A class have more than one constructor with same name but different formal arguments)
+   c)method shadowing:(If a parent and child class have same method declaration and it if is static)
+   d)variable shadowing:(If a parent and child class have same variable names declaration and it if is static)
+
+ii)Run Time polymorphism:
+   If the binding happend at run time but different behaviour is executed.
+
+EX:Method Overriding(changing the implementation of parent class method in child class)
+
+Rules for Method Overriding:
+i)Inheritance should be there between two class.
+ii)Method signature has to be same.
+iii)all the methods should be non-static.
+
+
+
+
+
+
+ 
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+ 
+                               
+
+
+
+

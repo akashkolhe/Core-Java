@@ -1,0 +1,19 @@
+interface I1 {
+	public void m1();
+	
+}
+interface I2{
+	public void m1();
+	
+}
+class Driver implements I1,I2{
+	public void m1() {
+		System.out.println("CLASS DRIVER");
+	}
+
+	public static void main(String[] args) {
+		Driver d =new Driver();
+		d.m1();
+		
+	}
+}

@@ -1,0 +1,14 @@
+package Exceptions;
+// NumberFormat Exception ---------------------------------
+//NUMBER FORMAT  EXCEPTION ---------
+public class NumberFormat {
+		public static void main(String[] args) {
+			String s = "akash";
+			try {
+				int a = Integer.parseInt(s);
+
+			} catch (NumberFormatException e) {
+					System.out.println("Exception handle");
+			}
+		}
+}

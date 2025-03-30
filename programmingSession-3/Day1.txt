@@ -1,0 +1,381 @@
+1)Features of java:
+i)Simple and easy
+ii)highly secured
+iii)platform independent
+iv)object oriented
+v)robust
+vi)multi threaded
+vii)high performanced
+viii)protable in nature
+
+2)What is platform independent?Why java is platform independent?
+-If the code is developed in one system which can be executable in any of the systems.
+-Because, once the source code is developed and compiled then our compiler will generate byte
+  code which can be executable in any of the systems where JRE is installed.
+
+3)What is jdk,jre and jvm?
+-JDK:Java development kit
+   JDK is a complete package which is used to develop the code and execute the code.
+  JDK contains javac(Java compiler) along with JRE. 
+
+-JRE:Java RunTime Environment
+   Jre is used to execute the bytecode.
+    Jre contains JVM along with inbuilt library functions.
+
+-Jvm:Java Virtual Machine.
+   Jvm is used to convert the byte code to machine understandable language.
+   Jvm contains JIT-compiler(interpreter) and classloader etc.
+
+4)Structure Of java program:
+
+  we can write our java program inside a class.Every class in java has a name called as
+   class name.Every class has a block called as class block.
+
+Syntax:   class ClassName
+          {
+            //instructions;
+            }
+
+EX:    class Program1
+       {
+           //instructions;
+       } 
+
+In side a class block we can declare only the members of the class.
+
+Members of the class:
+i)variables:  it is a small container used to store the data.
+ii)methods:   it is a set of instructions used to perform a specific task
+iii)initializers:  Are used to execute the start up instructions.
+
+
+If we want to execute any program we need main() method.
+Because execution always starts from main() and ends from main().
+
+syntax:public static void main(String[] args)
+    {
+      //instructions;
+     }
+
+EX:
+  class Prog1
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Hello goodevening");//used to display the data on output console
+	}
+}
+
+output:
+Hello goodevening
+
+
+Difference between print() and println():
+
+i)println():
+   -println() statement is used to print the data as well as move the cursir to the nextline.
+   -we can use println() with out passing any data also.
+
+ii)print():
+  -this statement is used to print the data but not new line or nextLine.
+  -we cannot use print() without passing any data,if we do so we get compile time error.
+
+
+                  Tokens:
+
+Smallest individual unit of programming language
+        3 types
+
+1)Keywords:
+  i)Predefined words used to perform some task.These keywords are already assign with some
+             task.
+  ii)all the keywords should be mentioned in lower case.
+  iii)our compiler will understand keywords easily.
+     EX:public,static,class,void etc.There are 50+ keywords in java.
+
+2)Identifiers:Name given to the components of a java program.
+   we can provide names to components of the java program like class name,variable,method etc
+
+  Rules for identifiers:
+  i)Identifier should never start with a number.
+  ii)Character space is not allowed.
+  iii)Special characters are not allowed except $ and _ 
+  iv)keywords cannot be used as an identifier.
+
+Note: If we dont follow the rule,we get compile time error.
+
+ 3)Literals:The data used in the java program is known as literals.
+   The data is futher classified into 2 types.
+
+ i) primitive literals:(single valued data)
+   a)Numbers
+     -numbers are of two types
+         Integer Number(ex:-14,0,5, etc...)
+         Decimal Number(ex:-34.45,0.0,3.14... etc)
+   b)character:Anything which is enclosed within the single quotes ('') 
+      ex:'s','#','5','H' etc...
+
+   c)Boolean: true o false
+
+ ii) Non-primitive liretals:(Multi valued)
+    EX: String,and all the instance of class(objects).
+   
+   String:Any thing which is enclosed within double quotes("") is known as String.
+
+     ex:"Hello","laila" etc....
+
+ 
+    EX:    
+   class Prog1
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Hello goodevening");
+		System.out.println(10);
+		System.out.println('F');
+		System.out.println(3.24);
+		System.out.println(false);
+		System.out.println("Sheela");
+	}
+}
+output:
+
+Hello goodevening
+10
+F
+3.24
+false
+Sheela
+
+              DataTypes And Variables
+
+Variables:It is a small container used to store the data.
+If we want decalre a variable first we need to specify what type of data  has to be stored.
+
+ That specifying data we can achieve with the help of data types.
+
+DataType:Data types are used to create the variables of specific types.
+           
+ 2 Types of datatypes:
+ i)Primitive datatypes:Are used to create primitive variables
+     There are 8 Primitive datatypes in java
+
+
+Primitive datatypes              Size             default values 
+i)byte                            1byte              0
+ii)short                          2                  0
+iii)int                           4                  0
+iv)long                           8                  0l
+v)float                           4                  0.0f
+vi)double                         8                  0.0d/0.0
+vii)char                          2bytes             /u0000
+viii)boolean                      1bit                 false
+
+Note:i)Number datatypes in increasing number of order 
+        byte<short<int<long<float<double
+     ii)All the Primitive datatypes in java are keywords.
+
+
+ii)Non-primitive datatypes:Are used to create non-primitive variables.
+  EX:Strings and all the class names in java are non-primitive datatypes.
+
+
+Variable:
+2 types.
+
+i)Primitive variable:Are used to store primitive values such as Number,character and boolean
+ 
+syntax: DataType variableName=data;
+ex:      int a=10; (declaration and initialization)
+         char ch='a';
+         boolean b=true;
+         double d=3.678;
+
+ii)Non-primitive variables:Are used to store the reference of object.
+ EX:String name="Sheela"; 
+
+EX
+
+class Prog1
+{
+	public static void main(String[] args)
+	{
+		int num=10;
+		double d=12.45;
+		char ch='a';
+		boolean b=true;
+		String name="ram";
+		System.out.println(num);
+		System.out.println(d);
+		System.out.println(ch);
+		System.out.println(b);
+		System.out.println(name);
+	}
+}
+
+
+output:
+10
+12.45
+a
+true
+ram
+
+  Scope of a Variable:
+
+Visiblity of a variable is known as scope of a Variable.
+
+Based on the scope the variables are classified into 3 types:
+
+i)Local variables:
+ii)Static 
+iii)non static
+
+
+i)Local variables:If a variable is declared inside any method or a block
+  
+characteristics:
+  -Local variable should be initialized before using,if not we get compile time error
+      Beacuse default values are not aplicable for local variables.
+ 
+ class Prog1
+{
+	public static void main(String[] args)
+	{
+		int num;
+		System.out.println(num);
+	}
+}
+ error: variable num might not have been initialized
+                System.out.println(num);
+  
+  -We cannot use the local variables outside of a block or method where it is declare.
+
+
+            Type Casting(Converting one type of data to another type of data)
+         2 types
+
+i)Primitive Type Casting
+ii)Non-Primitive Type Casting
+
+i)Primitive Type Casting:(Converting one type of primitive data to another type of primitive data)
+       2 type
+    a) widening:-converting smaller range data to higher range data.
+                -Widening can be done implicitly by the compiler.
+                 Thats y it is also called as implict widening(or)auto widening.                
+                - because there is no chance of data loss.
+  
+EX:
+
+ class Prog1
+{
+	public static void main(String[] args)
+	{
+		int a=10;
+		double d=a;
+		System.out.println(d);//10.0
+	}
+}
+ 
+    b)Narrowing:-converting higher range data to lower range data. 
+                -It cannot be done explictly by the compiler.
+                -Because there is a chance of data loss.
+                -We should perform narrowing explicitly using type caste operator.
+
+EX:
+class Prog1
+{
+	public static void main(String[] args)
+	{
+		double a=10.34;
+		int d=(int)a;
+		System.out.println(d);//10(data loss)
+	}
+}
+
+ Operators:(Are the special symbols used to perform the specific task)
+i)Arithmetic operator:(+,-,*,/,%)
+EX:
+
+class Prog1
+{
+	public static void main(String[] args)
+	{
+		int a=10;
+		int b=20;
+		System.out.println(a+b);//30
+		System.out.println(a-b);//-10
+		System.out.println(a*b);//200
+		System.out.println(a/b);//0
+		System.out.println(a%b);//10
+	}
+}
+
+ii)Assignment operator:Are used to assign the values
+  (+=,-=,*=,/=,%=,=)
+Ex:
+class Prog1
+{
+	public static void main(String[] args)
+	{
+		int a=10;
+		int b=20;
+		System.out.println(a+=b);//a=a+b  30
+		System.out.println(a-=b);//a=a-b  10
+		System.out.println(a*=b);//a=a*b  200
+		System.out.println(a/=b);//a=a/b  10
+		System.out.println(a%=b);//a=a%b  10
+	}
+}
+
+iii)Increment/Decrement:
+Increase the value by 1(++)        Decrease the value by 1(--)
+preincrement(++a)     pre(--a)(Update,substitute and use the substituted value)
+postincrement(a++)    post(a--)(substitute, update and use the substituted value )
+
+iv)Logical:
+ && -AND(When the both statements are true then logical AND will return true)
+ || - OR(if either of the statement is true the logical OR will return true)
+  ! -Not(Negation)
+
+ A     B          AND                A       B       OR
+ t     t           t                 t       t        t
+ t     f           f                 t       f        t
+ f     t           f                 f       t        t 
+ f     f           f                 f       f        f
+
+v)Relational:(>,<,>=,<=,==,!=)
+   Are used as conditions inside looping and decision making statements.
+   The return type of reletional operators is boolean.
+
+Ex:
+class Prog1
+{
+	public static void main(String[] args)
+	{
+		int a=10;
+		int b=20;
+		System.out.println(a>b);//false
+		System.out.println(a<b);//true
+		System.out.println(a>=b);//false
+		System.out.println(a<=b);//true
+		System.out.println(a==b);//false
+	}
+}
+
+Conditional:(Ternary)
+syntax:  statments1?Statement2:statement3
+          Condition? stat1:stat2
+   if condition is true stat1 gets executed or else stat2 gets executed  
+      
+EX:  
+class Prog1
+{
+	public static void main(String[] args)
+	{
+		int a=10;
+		int b=20;
+		System.out.println(a>b?a:b);//20
+		System.out.println(a<b?a:b);//10
+	}
+}

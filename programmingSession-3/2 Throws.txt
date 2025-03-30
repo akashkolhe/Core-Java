@@ -1,0 +1,28 @@
+import java.util.Scanner;
+// throws keyword -------------------------------------------------------------------------------
+ class Program4 {
+public static void main(String[] args) throws InterruptedException,ArithmeticException
+{
+//	for(int i=1;i<=5;i++)
+//	{
+//	System.out.println(i);
+//	Thread.sleep(2000);
+//	int b= 1/0;
+	System.out.println("Enter value :");
+	Scanner sc = new Scanner(System.in);
+	int a = sc.nextInt();
+	
+	try {
+		
+		if(a < 0) {
+			throw new Exception("Negative value not accept");
+		}
+		
+	}catch(Exception e) {
+		System.out.println("Negative value....");
+		e.printStackTrace();
+		
+	}
+	}
+
+	}
